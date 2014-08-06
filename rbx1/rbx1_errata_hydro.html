@@ -1,7 +1,11 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html><head><meta content="text/html; charset=ISO-8859-1" http-equiv="content-type"><title>RBX1 Errata ROS Hydro</title></head><body><meta http-equiv="content-type" content="text/html; charset=utf-8">
-<h2>Errata for Volume 1 for ROS Hydro</h2>
-<ul>
+<html><head>
+
+<meta content="text/html; charset=ISO-8859-1" http-equiv="content-type"><title>RBX Volume 1 Errata ROS Hydro</title><meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta content="R. Patrick Goebel" name="author">
+</head><body>
+<h2>RBX Volume 1 Errata for ROS Hydro</h2>
+<ol>
   <li>There is a missing step in section<span class="Apple-converted-space">&nbsp;</span><strong>4.7 Mixing catkin and rosbuild Workspaces</strong>.<br>
 In this section, you are instructed to add the following line to your ~/.bashrc file:<tt style="font-family: Monaco,'DejaVu Sans Mono','Bitstream Vera Sans Mono','Lucida Console',monospace; font-size: 12px; max-width: 66em;"><br>
     <br>
@@ -12,7 +16,7 @@ The missing step is that we also need to add the following line right after the 
 export ROS_PACKAGE_PATH=~/ros_workspace:$ROS_PACKAGE_PATH</tt><span style="font-family: arial,sans-serif;"></span><br>
     <br>
 This will ensure that your ~/ros_workspace directory remains in your ROS_PACKAGE_PATH.</li>
-</ul>
+</ol>
 
   
 
