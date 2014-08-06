@@ -1,6 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html><head>
 
+
   
   <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type"><title>RBX Volume 2 Errata ROS Hydro</title>
   
@@ -21,13 +22,30 @@
 <h2>RBX Volume 2 Errata for ROS Hydro</h2>
 
 <ol>
-
-  <li> There is a command missing in Section 4.12.2 (A fake Pi
-Robot).&nbsp; The missing
-command should be: <br>
+  <li>In Section <span style="font-weight: bold;">4.12.2</span> (<span style="font-style: italic;">A fake Pi
+Robot</span>) in the first paragraph on page <span style="font-weight: bold;">145</span>, there is a command missing from the text box. The missing
+command&nbsp; is: <br>
     <br><big><span style="font-family: monospace;">
 $ roslaunch rbx2_bringup pi_robot_with_gripper.launch
-sim:=true</span></big> </li>
+sim:=true<br>
+    <br>
+    </span></big></li>
+  <li><big><small>In section <span style="font-weight: bold;">11.29</span> (<span style="font-style: italic;">Creating a Custom Fast IK Plugin</span>) on page <span style="font-weight: bold;">369</span>, the following command is missing the continuation character at the end of the line break.&nbsp; The command line should be:</small><span style="font-family: monospace;"><br>
+    <br>
+$ rosrun moveit_ikfast round_collada_numbers.py pi_robot.dae \ <br>
+&nbsp; pi_robot_rounded.dae 5<br>
+    <br>
+    </span></big></li>
+  <li>In Section <span style="font-weight: bold;">12.11.2</span> (<span style="font-style: italic;">Running the demo</span>) on page <span style="font-weight: bold;">401</span>, the <big><small>following command is missing the continuation character at the end of the line break.&nbsp; The command line should be:<br>
+    <br>
+    <big><span style="font-family: monospace;">$ rosrun rviz rviz -d `rospack find \ </span><br style="font-family: monospace;">
+    <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp; rbx2_arm_nav`/config/real_pick_and_place.rviz</span></big><br>
+    <br>
+    <br>
+    <br>
+    <br>
+    </small><span style="font-family: monospace;"></span></big></li>
+  <span style="font-family: monospace;"></span>
 </ol>
 
 </body></html>
