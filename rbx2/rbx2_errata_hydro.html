@@ -2,6 +2,8 @@
 <html><head>
 
 
+
+
   
   <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type"><title>RBX Volume 2 Errata ROS Hydro</title>
   
@@ -18,10 +20,68 @@
      body {
         font-size: 1.2em;
       }
-  </style></head><body>
+  </style><meta http-equiv="CONTENT-TYPE" content="text/html; charset=utf-8"><meta name="GENERATOR" content="LibreOffice 3.5  (Linux)"><style type="text/css">
+	<!--
+		@page { margin: 0.79in }
+		P { margin-bottom: 0.12in; background: transparent; direction: ltr; color: #000000; text-align: left; widows: 2; orphans: 2; page-break-before: auto }
+		P.western { font-family: "Times New Roman", serif; font-size: 9pt; so-language: en-US }
+		P.cjk { font-family: "Times New Roman", serif; font-size: 9pt; so-language: zxx }
+		P.ctl { font-family: "Times New Roman", serif; font-size: 11pt; so-language: ar-SA }
+		A:visited { color: #800080 }
+		A.western:visited { so-language: en-US }
+		A.cjk:visited { so-language: zxx }
+		A.ctl:visited { so-language: zxx }
+		A:link { color: #0000ff; background: transparent }
+		A.western:link { font-family: "Times New Roman", serif; font-size: 11pt }
+	--> </style></head><body>
 <h2>RBX Volume 2 Errata for ROS Hydro</h2>
 
 <ol>
+
+  
+  <li>In Chapter 2 (<span style="font-style: italic;">Installing the ros-by-example Code</span>) the wget command is missing the continuation character at the end of the line.&nbsp; The command should be:<br>
+    <br>
+
+
+
+	
+	
+	<span style="font-family: Courier New,monospace;"></span><big><span style="font-family: monospace;">$ wget https://raw.githubusercontent.com/pirobot/rbx2/hydro-devel/\ </span><br style="font-family: monospace;">
+    <span style="font-family: monospace;">&nbsp; rbx2-prereq.sh</span></big><br>
+&nbsp;<br>
+  </li>
+  
+  <li>In Section <span style="font-weight: bold;">4.12.1</span> a
+couple of command lines are missing the continuation character at the
+line break which means that copy-and-paste of the command to terminal
+window will not work.&nbsp; The two commands should be:<br>
+    <br>
+    <big><span style="font-family: monospace;">$ rostopic pub -1 /right_arm_shoulder_lift_joint/command \ <br>
+&nbsp; std_msgs/Float64 -- -1.57</span></big><br>
+    <br>
+    <big><span style="font-family: monospace;">$ rostopic pub -1 /right_arm_shoulder_lift_joint/command \ <br>
+&nbsp; std_msgs/Float64 -- 0.0</span></big><br>
+    <br>
+    <br>
+<style type="text/css"><!--
+		@page { margin: 0.79in }
+		P { margin-bottom: 0.12in; background: transparent; direction: ltr; color: #000000; text-align: left; widows: 2; orphans: 2; page-break-before: auto }
+		P.western { font-family: "Times New Roman", serif; font-size: 9pt; so-language: en-US }
+		P.cjk { font-family: "Times New Roman", serif; font-size: 9pt; so-language: zxx }
+		P.ctl { font-family: "Times New Roman", serif; font-size: 11pt; so-language: ar-SA }
+		A:visited { color: #800080 }
+		A.western:visited { so-language: en-US }
+		A.cjk:visited { so-language: zxx }
+		A.ctl:visited { so-language: zxx }
+		A:link { color: #0000ff; background: transparent }
+		A.western:link { font-family: "Times New Roman", serif; font-size: 11pt }
+	-->
+	</style>&nbsp;
+
+
+    <br>
+    <br>
+  </li>
   <li>In Section <span style="font-weight: bold;">4.12.2</span> (<span style="font-style: italic;">A fake Pi
 Robot</span>) in the first paragraph on page <span style="font-weight: bold;">145</span>, there is a command missing from the text box. The missing
 command&nbsp; is: <br>
@@ -29,7 +89,24 @@ command&nbsp; is: <br>
 $ roslaunch rbx2_bringup pi_robot_with_gripper.launch
 sim:=true<br>
     <br>
+</span></big></li>
+
+  <li><big><small>In section <span style="font-weight: bold;">5.4</span>, two of the rostopic commands are missing the continuation character at the end of the line.&nbsp; Those commands should be:<br>
+    <br>
+    <big><span style="font-family: monospace;">$ rostopic pub -1 /right_arm_shoulder_lift_joint/command \ <br>
+&nbsp; std_msgs/Float64 -- -2.0</span></big><br>
+    <br>
+    <big><span style="font-family: monospace;">$ rostopic pub -1 /right_arm_shoulder_lift_joint/command \ <br>
+&nbsp; std_msgs/Float64 -- 0.0 </span></big><br>
+    <br>
+    </small></big></li>
+  <li><big><small>In section <span style="font-weight: bold;">5.5</span>, the second roslaunch command is missing the continuation character at the end of the line.&nbsp; That command should be:</small></big><br>
+    <br>
+    <big><span style="font-family: monospace;">$ roslaunch rbx2_bringup pi_robot_head_only.launch sim:=false \ </span><br style="font-family: monospace;">
+    <span style="font-family: monospace;">&nbsp; port:=/dev/ttyUSB1</span></big><br>
+    <big><span style="font-family: monospace;"><br>
     </span></big></li>
+
   <li><big><small>In section <span style="font-weight: bold;">11.29</span> (<span style="font-style: italic;">Creating a Custom Fast IK Plugin</span>) on page <span style="font-weight: bold;">369</span>, the following command is missing the continuation character at the end of the line break.&nbsp; The command line should be:</small><span style="font-family: monospace;"><br>
     <br>
 $ rosrun moveit_ikfast round_collada_numbers.py pi_robot.dae \ <br>
@@ -41,11 +118,69 @@ $ rosrun moveit_ikfast round_collada_numbers.py pi_robot.dae \ <br>
     <big><span style="font-family: monospace;">$ rosrun rviz rviz -d `rospack find \ </span><br style="font-family: monospace;">
     <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp; rbx2_arm_nav`/config/real_pick_and_place.rviz</span></big><br>
     <br>
+</small></big></li>
+  <li>In Section <span style="font-weight: bold;">11.26</span> (<span style="font-style: italic;">Pick and Place</span>) the rviz<big><small> command is missing the continuation character at the end of the line break.&nbsp; The command line should be:</small></big><br>
+
+
+
+	<meta http-equiv="CONTENT-TYPE" content="text/html; charset=utf-8"><title></title><meta name="GENERATOR" content="LibreOffice 3.5  (Linux)">
+	
+	
+	<style type="text/css">
+	<!--
+		@page { margin: 0.79in }
+		P { margin-bottom: 0.12in; background: transparent; direction: ltr; color: #000000; text-align: left; widows: 2; orphans: 2; page-break-before: auto }
+		P.western { font-family: "Times New Roman", serif; font-size: 9pt; so-language: en-US }
+		P.cjk { font-family: "Times New Roman", serif; font-size: 9pt; so-language: zxx }
+		P.ctl { font-family: "Times New Roman", serif; font-size: 11pt; so-language: ar-SA }
+		A:visited { color: #800080 }
+		A.western:visited { so-language: en-US }
+		A.cjk:visited { so-language: zxx }
+		A.ctl:visited { so-language: zxx }
+		A:link { color: #000000; background: transparent }
+		A.western:link { font-family: "Times New Roman", serif; font-size: 11pt }
+	-->
+	</style>
+
     <br>
+    <big><span style="font-family: monospace;">$ rosrun rviz rviz -d `rospack find \ <br>
+&nbsp; rbx2_arm_nav`/config/pick_and_place.rviz</span></big><br>
+    <br>
+  </li>
+  <li>In Section <span style="font-weight: bold;">12.8</span><meta http-equiv="CONTENT-TYPE" content="text/html; charset=utf-8"><title></title><meta name="GENERATOR" content="LibreOffice 3.5  (Linux)"><style type="text/css">
+	<!--
+		@page { margin: 0.79in }
+		H2 { margin-left: 0.4in; text-indent: -0.4in; margin-bottom: 0.08in; background: transparent; direction: ltr; color: #000000; text-align: left; widows: 2; orphans: 2; page-break-before: auto }
+		H2.western { font-size: 13pt; so-language: en-US }
+		H2.cjk { font-family: "Times New Roman", serif; font-size: 13pt; so-language: zxx; font-weight: normal }
+		H2.ctl { font-family: "Times New Roman", serif; font-size: 13pt; so-language: ar-SA; font-weight: normal }
+		P { margin-bottom: 0.12in; background: transparent; direction: ltr; color: #000000; text-align: left; widows: 2; orphans: 2; page-break-before: auto }
+		P.western { font-family: "Times New Roman", serif; font-size: 9pt; so-language: en-US }
+		P.cjk { font-family: "Times New Roman", serif; font-size: 9pt; so-language: zxx }
+		P.ctl { font-family: "Times New Roman", serif; font-size: 11pt; so-language: ar-SA }
+		A:visited { color: #800080 }
+		A.western:visited { so-language: en-US }
+		A.cjk:visited { so-language: zxx }
+		A.ctl:visited { so-language: zxx }
+		A:link { color: #000000; background: transparent }
+		A.western:link { font-family: "Times New Roman", serif; font-size: 11pt }
+	-->
+	</style>
+
+
+ (<span style="font-style: italic;">Testing the Kobuki Robot in Gazebo</span>) the first 'rostopic pub'<big><small> command is missing the continuation character at the end of the line break.&nbsp; The command line should be:</small></big><br>
+    <br>
+    <big><small>
+    <big><span style="font-family: monospace;">$ rostopic pub -r 10 /mobile_base/commands/velocity \ <br>
+&nbsp; geometry_msgs/Twist '{linear: {x: 0.2}}'</span></big><br>
+    <br>
+<br>
     <br>
     <br>
     </small><span style="font-family: monospace;"></span></big></li>
+
   <span style="font-family: monospace;"></span>
 </ol>
+
 
 </body></html>
