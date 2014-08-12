@@ -1,8 +1,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html><head>
+
   
-  <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type">
-  <title>RBX Volume 1 Errata ROS Hydro</title>
+  <meta content="text/html; charset=ISO-8859-1" http-equiv="content-type"><title>RBX Volume 1 Errata ROS Hydro</title>
+  
 
   
   
@@ -12,69 +13,13 @@
   <meta content="R. Patrick Goebel" name="author">
 
   
-  <style>body{ font-size: 1.2em; } </style>
-</head><body>
+  <style>body{ font-size: 1.2em; } </style></head><body>
 <h2>RBX Volume 1 Errata for ROS Hydro</h2>
 
-<ol>
+This page has been moved to:<br>
+<br>
+<a href="https://code.google.com/p/ros-by-example/wiki/Errata_Volume_1_Hydro">https://code.google.com/p/ros-by-example/wiki/Errata_Volume_1_Hydro</a><br>
+<br>
 
-  <li>There is a missing step in section <strong>4.7 Mixing catkin
-and rosbuild Workspaces</strong>.<br>
-In this section, you are instructed to add the following line to your
-~/.bashrc file:<br>
-<br><big><span style="font-family: monospace;">
-source ~/ros_workspace/setup.bash</span></big><br>
-    <br>
-The missing step is that we also need to add the following line right
-after the above line:<br>
-    <br><big><span style="font-family: monospace;">
-export ROS_PACKAGE_PATH=~/ros_workspace:$ROS_PACKAGE_PATH</span></big><br>
-    <br>
-This will ensure that your ~/ros_workspace directory remains in your
-ROS_PACKAGE_PATH.<br>
-    <br>
-</li>
-  <li>Referring to section 10.3.2, "Installing Webcam Drivers",
-    instructions are provided for building Eric Perko's uvc_cam
-    package.&nbsp; Eric's uvc_cam package still uses rosbuild so for those of
-    you who are or might have trouble running both rosbuild workspace
-    and a catkin work spaces together, I have created a catkinized
-    version of uvc_cam.&nbsp; Below are the steps for installing it in you
-    your catkin workspace directory.<br>
-
-    <br>
-
-    <b>NOTE</b>: If you are already successfully using the rosbuild
-    version of the uvc_cam package, there is no need to install the
-    catkinized version.&nbsp; The actual driver files are identical.<br>
-
-    <br>
-
-    The following commands assume that your catkin workspace directory
-    is located at ~/catkin_ws.&nbsp; Substitute the appropriate directory if
-    your location is different.<br>
-
-    <br>
-
-    $ cd ~/catkin_ws/src<br>
-
-    $ git clone https://github.com/pirobot/<wbr>uvc_cam.git<br>
-
-    $ cd uvc_cam<br>
-
-    $ git checkout hydro-devel<br>
-
-    $ cd ~/catkin_ws<br>
-
-    $ catkin_make<br>
-
-    $ rospack profile<br>
-
-    <br>
-
-    You can then proceed to test your webcam following the instructions
-    in section 10.3.4.</li>
-
-</ol>
 
 </body></html>
